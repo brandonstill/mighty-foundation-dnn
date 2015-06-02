@@ -1,0 +1,17 @@
+// Fix viewport for editing
+html,
+body.dnnEditState {
+  overflow-x: hidden;
+}
+
+// Stop annoying fades, hurts focus more than helps
+.dnnEditState .DnnModule { opacity: 1 !important; }
+
+// Fix Control Bar Height
+.showControlBar {
+  $control-bar-height: 53px;
+  body { margin-top: $control-bar-height; }
+  #canvas { margin-top: (-$control-bar-height); }
+  .fixed,
+  .blur { top: $control-bar-height; }
+}

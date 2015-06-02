@@ -1,0 +1,92 @@
+.quotrr { overflow: hidden; }
+
+.locator {
+  input[type='text'],
+  a {
+    display: inline-block;
+    max-width: 300px;
+  }
+}
+
+.pusher {
+  @extend .button;
+  @extend .expand;
+}
+
+.firstName,
+.lastName,
+.city,
+.state {
+  @extend .small-6;
+  @extend .columns;
+}
+
+.address,
+.addressAdv,
+.email,
+.phone,
+.wq-box  {
+  @extend .small-12;
+  @extend .columns;
+}
+
+.validation div {
+  @extend .panel;
+  @extend .callout;
+  overflow: hidden;
+}
+
+.surveyor {
+  max-width: 500px;
+
+  .trigger {
+    @extend .small-12;
+    @extend .columns;
+  }
+
+}
+
+.quotrr .wq-box {
+  label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  span label {
+    display: none;
+  }
+}  
+
+.quotrr {
+  input, select {
+    font-size: rem-calc(17);
+  }
+}
+
+.designation {
+  font-size: 32px !important;
+}
+
+.slider-quote {
+  @extend .medium-4;
+  @extend .large-3;
+  @extend .columns;
+  @extend .panel;
+}
+
+.slider-quote-submit {
+  @extend .success;
+}
+
+@media #{$small-only} {
+  .slider-quote {
+    margin-bottom: 0;
+  }
+}
+
+@media #{$medium-up} {
+  .slider-quote {
+    position: absolute;
+    right: 2em;
+    top: 2em;
+  }
+}
