@@ -38,7 +38,6 @@
 
 .surveyor {
   max-width: 500px;
-
   .trigger {
     @extend .small-12;
     @extend .columns;
@@ -56,14 +55,23 @@
   }
 }  
 
-.quotrr {
-  input, select {
-    font-size: rem-calc(17);
+.designation {
+  font-size: 32px !important;
+}
+
+.fillme {
+  padding: 10px;
+  background-color: $alert-color;
+  margin-bottom: 10px;
+  label {
+    color: white;
   }
 }
 
-.designation {
-  font-size: 32px !important;
+span.fillme {
+  display: inline-block;
+  width: 100%;
+  color: white
 }
 
 .slider-quote {
