@@ -7,6 +7,7 @@ $( document ).ready(function() {
   // var slider = require('./slider.js');
 
   // do something here
+  // more stuff
 
 });
 
