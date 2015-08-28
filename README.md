@@ -9,30 +9,42 @@
 
 ## Installation
 
-```
-# Install devDependencies first time only
-sudo ./npm-install-global
+``` bash
+# First Run
+sudo scripts/install
 
-# Next time you only need to run this
-sudo ./npm-link
-
-# Install dependencies
-sudo npm install --production
-
-# Move necessary assets out of dependencies
-sudo ./npm-preen
+# Re-install
+rm -rf node_modules
+sudo npm i --no-bin-links
 
 # Start hacking
 gulp dev
-# or
-gulp build-watch
+```
+
+## Installation (global)
+
+```
+# First Run
+sudo scripts/install-global
+
+# Re-Install
+sudo npm install --production
+sudo scripts/link-global
+
+# Start hacking
+gulp dev
+
 ```
 
 ## Custom Theme
 
-```
+``` bash
 # Install Hub Subcommand for this
 brew install hub
+# or on linux
+sudo add-apt-repository ppa:cpick/hub
+sudo apt-get update
+sudo apt-get install hub
 
 # Create new repo
 git remote rename origin upstream
@@ -49,7 +61,14 @@ git commit -m "Changes..."
 git pull upstream master
 
 # Publish the changes to your new repo
-git push origin custom
+git push -u origin custom
+```
+
+## Switching Themes
+
+``` shell
+git fetch
+git checkout branch-theme-name
 ```
 
 ### Commands
