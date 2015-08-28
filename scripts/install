@@ -1,0 +1,6 @@
+#! /bin/bash
+
+if [ -f /usr/local/bin/gulp ]; then
+    npm install gulp -g
+fi
+npm install --no-bin-links
