@@ -25,15 +25,6 @@ gulp.task('minifyJS', function() {
   .pipe(gulp.dest('./dist/js/'));
 });
 
-gulp.task('minifyCSS', function() {
-  gulp.src(['dist/css/*.css', '!dist/css/*.min.css'])
-    .pipe(minifyCSS())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./dist/css/'));
-});
-
-gulp.task('minify', ['minifyJS', 'minifyCSS']);
-
 // Browserify task
 gulp.task('browserify', function() {
   // Single point of entry
@@ -54,6 +45,10 @@ gulp.task('stylesheets', function() {
         'node_modules/slick-carousel/slick'
       ]}))
     .pipe(prefix('last 2 versions'))
+    .pipe(gulp.dest('./dist/css/'))
+    // seperating these out in watch task doesn't work
+    .pipe(minifyCSS())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./dist/css/'));
 });
 
@@ -64,13 +59,10 @@ gulp.task('watch', function() {
     'minifyJS'
   ]);
   gulp.watch(['./styles/**/*.scss'], [
-    'stylesheets',
-    'minifyCSS'
+    'stylesheets'
   ]);
 });
 
 gulp.task('default', ['browserify', 'stylesheets']);
 
 gulp.task('dev', ['default', 'watch']);
-
-gulp.task('build', ['default', 'minify']);
