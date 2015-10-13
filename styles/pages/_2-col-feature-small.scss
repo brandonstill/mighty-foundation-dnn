@@ -1,6 +1,5 @@
 .page-template-feature-small.page-template-2-col {
   .feature-wrap-small {
-    @extend .make-it-white; //see base.scss
     background-color: $primary-color;
     background-position: center;
     background-size: cover;
@@ -8,6 +7,7 @@
     padding: rem-calc(60) rem-calc(15);
     position: relative;
     text-shadow: rgb(0,0,0) 1px 1px 0px;
+    color: white;
     @media #{$small-only} {
       margin-right: 0;
     }
@@ -15,7 +15,9 @@
     h2,
     h3,
     h4 {
+      color: #fff;
       margin: 0;
+
     }
     h2 {
       font-size: rem-calc(44);
@@ -35,3 +37,4 @@
     }
   }
 }
+

@@ -38,6 +38,7 @@
 
 .surveyor {
   max-width: 500px;
+
   .trigger {
     @extend .small-12;
     @extend .columns;
@@ -50,10 +51,17 @@
     display: inline-block;
     margin-right: 10px;
   }
+
   span label {
     display: none;
   }
-}  
+} 
+
+.quotrr {
+    input, select {
+    font-size: rem-calc(17);
+  }
+} 
 
 .designation {
   font-size: 32px !important;
