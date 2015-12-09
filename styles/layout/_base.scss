@@ -1,4 +1,13 @@
 // ----------------------------------------------------------------------------
+// Global
+
+$banner-height: 140px; // after styling record navigation height here
+$feature-height-xl: 920px - $banner-height;
+$feature-height-lg: 690px - $banner-height;
+$feature-height-md: 490px - $banner-height;
+$feature-height-sm: 320px - $banner-height;
+
+// ----------------------------------------------------------------------------
 // Imports
 
 @import 'reset';
@@ -8,7 +17,6 @@
 @import 'contentinfo';
 
 // ----------------------------------------------------------------------------
-// Global
 
 .full-width {
    width: 100%;
