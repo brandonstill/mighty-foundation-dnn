@@ -19,7 +19,7 @@
   <fnn:TopBar runat="server"
     RightNode="*,0,2"
     RightExcludes="Home,Admin,Revolution"
-    Hover="false"
+    Hover="true"
   />
 </div>
 </header>
