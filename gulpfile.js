@@ -66,7 +66,7 @@ gulp.task('stylesheets-min', function() {
         'styles/vendor/utility-belt/scss',
         'styles/vendor/slick/slick'
       ]}))
-    .pipe(prefix('last 2 versions'))
+    .pipe(prefix('last 3 versions'))
     .pipe(gulp.dest('./dist/css/'))
     .pipe(minifyCSS())
     .pipe(rename({ suffix: '.min' }))
