@@ -12,14 +12,30 @@
 
 <ar:Init runat='server'/>
 <dnn:DnnCssInclude runat="server" FilePath="dist/css/skin.min.css" PathNameAlias="SkinPath" ForceProvider="DnnPageHeaderProvider" Priority="6" />
+<dnn:DnnCssInclude runat="server" FilePath="inc/plugins/font-awesome/css/font-awesome.min.css" PathNameAlias="SkinPath" ForceProvider="DnnPageHeaderProvider" Priority="6" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
 <dnn:DnnJsInclude runat="server" FilePath="dist/js/skin.min.js" PathNameAlias="SkinPath" ForceProvider="DnnFormBottomProvider" Priority="4" />
 
-<header role="banner">
-<div class="header-wrap">
-  <fnn:TopBar runat="server"
-    RightNode="*,0,2"
-    RightExcludes="Home,Admin,Revolution"
-    Hover="true"
-  />
-</div>
+<header role="banner" class="c-banner">
+  <div class="row" data-equalizer>
+    <div class="c-banner__brand" data-equalizer-watch>
+      <dnn:LOGO runat="server" />
+    </div>
+    <div class="c-banner__mini-nav-sm">
+      <a class="c-banner__mini-phone" href="tel:<avt:MyTokens runat="server" Token="[RevTemplate:Standard.LocalNumber]" />">
+        <span><i class="fa fa-phone"></i></span> Call
+      </a>
+      <a role="button" class="right-off-canvas-toggle offcanvas-menu-icon" href="#"><span></span> Menu</a>
+    </div>
+    <div class="c-banner__navigation" data-equalizer-watch>
+      <div class="c-banner__mini-nav hide-for-small-only">
+        <ul class="c-banner__mini-nav-list">
+          <li><avt:MyTokens runat="server" Token="[RevTemplate:Standard.LocalNumber]" /></li>
+          <li><a href="/client-service/claims">Claims</a></li>
+          <li><a href="/contact-us/about-us">About</a></li>
+          <li><a role="button" class="right-off-canvas-toggle offcanvas-menu-icon" href="#"><span></span> Menu</a></li>
+        </ul>
+      </div>  
+    </div>
+  </div>
 </header>

@@ -1,20 +1,29 @@
+$main-color: $secondary-color;
+
 [role='main'] {
-  .content {
+  @extend .u-common-padding;
+  .page-template-index & {
+    @extend .u-make-it-white; //see base.scss
+    background-color: $main-color;
+  }
+  .o-content-pane {
     @extend .medium-8;
     @extend .columns;
-    min-height: 25em;
   }
 
-  .aside {
+  .o-aside-pane {
     @extend .medium-4;
     @extend .columns;
     @extend .right;
-
-    &.DNNEmptyPane + .content {
+    &.DNNEmptyPane + .o-content-pane {
       @extend .medium-12;
       border-right: 0;
     }
+  }
 
+  .o-top-pane, .o-bottom-pane {
+    @extend .small-12;
+    @extend .columns;
   }
 
   // Half size HR
@@ -27,7 +36,7 @@
 
 @media #{$medium-up} {
   [role='main'] {
-    .aside {
+    .o-aside-pane {
       padding-left: 20px;
     }
   }

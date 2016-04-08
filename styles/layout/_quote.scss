@@ -1,16 +1,9 @@
-.quotrr { overflow: hidden; }
-
-.locator {
-  input[type='text'],
-  a {
-    display: inline-block;
-    max-width: 300px;
-  }
-}
-
 .pusher {
   @extend .button;
   @extend .expand;
+  input[type=submit]& {
+    border-radius: 30px !important;
+  }
 }
 
 .firstName,
@@ -37,7 +30,6 @@
 }
 
 .surveyor {
-  max-width: 500px;
   .trigger {
     @extend .small-12;
     @extend .columns;
@@ -72,29 +64,4 @@ span.fillme {
   display: inline-block;
   width: 100%;
   color: white
-}
-
-.slider-quote {
-  @extend .medium-4;
-  @extend .large-3;
-  @extend .columns;
-  @extend .panel;
-}
-
-.slider-quote-submit {
-  @extend .success;
-}
-
-@media #{$small-only} {
-  .slider-quote {
-    margin-bottom: 0;
-  }
-}
-
-@media #{$medium-up} {
-  .slider-quote {
-    position: absolute;
-    right: 2em;
-    top: 2em;
-  }
 }

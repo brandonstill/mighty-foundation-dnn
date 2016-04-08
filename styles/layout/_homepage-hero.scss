@@ -1,0 +1,112 @@
+$homepage-hero-color: lighten($primary-color, 15);
+
+.c-homepage-hero {
+  background-color: $homepage-hero-color;
+  &__sidebar {
+    @extend .columns;
+    @extend .medium-6;
+    background-size: cover;
+    background-position: center center;
+    @media #{$small-only} {
+      min-height: 400px; //see base.scss
+    }
+    @media #{$medium-only} {
+      min-height: $feature-height-md; //see base.scss
+    }
+    @media #{$large-only} {
+      min-height: $feature-height-lg; //see base.scss
+    }
+    @media #{$xlarge-up} {
+      min-height: $feature-height-xl; //see base.scss
+    }
+  }
+  &__content {
+    @extend .columns;
+    @extend .medium-6;
+    float: right;
+  }
+}
+.c-quick-quote {
+  padding: rem-calc(30) 0;
+  @media #{$medium-up} {
+    padding: rem-calc(20) rem-calc(30);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  h1 {
+    @media #{$small-only} {
+      font-size: rem-calc(30);
+      line-height: 1.2;
+    } 
+    @media #{$medium-only} {
+      font-size: rem-calc(26);
+      line-height: 1.2;
+    } 
+  }
+  h2 {
+    @media #{$small-only} {
+      font-size: rem-calc(28);
+      line-height: 1.2;
+    }
+    @media #{$medium-only} {
+      font-size: rem-calc(24);
+      line-height: 1.2;
+    } 
+  }
+  &__title {
+    @extend .u-make-it-white;
+  }
+  &__col1, &__col2,  {
+    @extend .columns;
+    @extend .medium-6;
+    @extend .large-4;
+    @media #{$small-only} {
+      padding: 0 !important;
+    }
+    @media #{$medium-only} {
+      padding: 0 !important;
+    }
+    @media #{$large-up} {
+      padding-left: 0;
+    } 
+  }
+  &__col1 {
+    @media #{$medium-only} {
+      padding: 0 !important;
+    }
+  }
+  &__col2 {
+    @media #{$medium-only} {
+      padding: 0 0 0 rem-calc(15) !important;
+    }
+  }
+  &__col3 {
+    @extend .columns;
+    @extend .large-4;
+    @media #{$small-only} {
+      padding: 0 !important;
+    }
+    @media #{$medium-only} {
+      padding: 0 !important;
+    }
+    @media #{$large-up} {
+      padding-left: 0;
+    } 
+  }
+  select, input {
+    @media #{$medium-only} {
+      font-size: 12px;
+    }
+    @media #{$large-up} {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+  }
+  .button {
+    margin-bottom: 0;
+    @media #{$large-up} {
+      max-width: 160px;
+    }
+  }
+}

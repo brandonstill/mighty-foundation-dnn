@@ -1,0 +1,219 @@
+$offcanvas-color: #fff; // Change for darker background
+$offcanvas-link-color: $primary-color; // Adjust if dark background
+$offcanvas-link-hover-color: lighten($offcanvas-link-color, 20); // Adjust if dark background
+$offcanvas-sub-link-color: lighten(#454545, 10); // Adjust if dark background
+$offcanvas-sub-link-hover-color: lighten($offcanvas-sub-link-color, 15); // Adjust if dark background
+$offcanvas-menu-link-color: $offcanvas-link-color;
+
+// Right off canvas
+.right-off-canvas-menu { // If using left change this to .left-off-canvas-menu
+  background-color: $offcanvas-color; // Change for darker background
+  width: rem-calc(280);
+  bottom: initial; // :(
+  .off-canvas-header {
+    position: relative;
+  }
+  a.exit-off-canvas {
+    height: 40px !important;
+    width: 40px !important;
+    box-shadow: none !important;
+    top: 20px;
+    position: relative !important;
+    float: right;
+    background: none !important;
+    margin-right: 15px;
+    line-height: 1;
+    &:after {
+      font-size: rem-calc(40);
+      font-family: FontAwesome !important;
+      font-weight: normal;
+      content: '\f00d';
+      display: inline-block;
+      color: $offcanvas-link-color;
+      top: 0;
+      left: 0;
+      position: relative;
+    }
+    &:hover {
+      &:after {
+        color: $offcanvas-link-hover-color;
+      }
+    }
+  }
+}
+
+// Off canvas
+.off-canvas-list {
+  padding: 80px 30px 40px !important;
+  > li {
+    position: relative;
+  }
+  > li > a {
+    font-size: rem-calc(20) !important; // Change this depending on  font
+    line-height: 1 !important;
+    padding: 10px 20px 10px 10px!important;
+    border-bottom: 0 !important; // Change for darker background
+    color: $offcanvas-link-color !important;
+    &:visited {
+      color: $offcanvas-link-color !important;
+    }
+    &:hover {
+      color: $offcanvas-link-hover-color !important;
+      background: none !important;
+    }
+  }
+  .has-dropdown .toggle-me {
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    &:after {
+      font-size: rem-calc(14);
+      font-family: FontAwesome !important;
+      font-weight: normal;
+      content: '\f078';
+      transform: rotate(0);
+      transition: all .4s; 
+      display: inline-block;
+      color: $offcanvas-link-color;
+      top: 6px;
+      left: 5px;
+      position: relative;
+    } 
+    &.active:after {
+      transform: rotate(180deg);
+    } 
+    &:hover:after {
+      transform: rotate(90deg);
+    } 
+  }
+}
+
+// Off canvas submenu
+
+.off-canvas-submenu {
+  padding: 0 !important;
+  margin: 0 !important;
+  li {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    a {
+      border-bottom: 0 !important;
+      padding: 4px 20px !important;
+      font-size: rem-calc(14) !important;
+      color: $offcanvas-sub-link-color !important;
+      &:visited {
+        color: $offcanvas-sub-link-color !important;
+      }
+      &:hover {
+        color: $offcanvas-sub-link-hover-color !important;
+        background: none !important;
+      }
+    }
+  }
+}
+
+// Off canvas background
+
+.offcanvas-overlap .exit-off-canvas {
+  background: rgba(#000,.4) !important;
+}
+
+// Off canvas menu icon
+
+.offcanvas-menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  @include hamburger($tabbar-hamburger-icon-width, $tabbar-hamburger-icon-left, $tabbar-hamburger-icon-top, $tabbar-hamburger-icon-thickness, $tabbar-hamburger-icon-gap, $offcanvas-menu-link-color, $tabbar-menu-icon-hover, true);
+  color: $offcanvas-menu-link-color;
+  font-size: 14px;
+  position: relative;
+  text-align: right;
+  &:visited {
+    color: $offcanvas-menu-link-color;
+  }
+  &:hover {
+    color: $offcanvas-menu-link-color;
+    span {
+      background-color: $offcanvas-menu-link-color; 
+      &::after { 
+        box-shadow: 0 0 0 1px $white, 0 7px 0 1px $white, 0 14px 0 1px $white; 
+      }
+    } 
+  }
+  @media #{$small-only} {
+    text-align: center;
+    line-height: 21px;
+  }
+  @media #{$medium-up} {
+    border: 1px solid $offcanvas-menu-link-color;
+    border-radius: 30px;
+    line-height: 1.5;
+    margin-top: -10px;
+    min-width: 94px;
+    padding: 9px 14px 9px 0;
+    transition-duration: .3s;
+    &:hover {
+      background-color: $offcanvas-menu-link-color;
+      color: $white;
+      span::after { box-shadow: 0 0 0 1px $white, 0 7px 0 1px $white, 0 14px 0 1px $white; }
+    }
+  }
+
+  span {
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    border: 1px solid $offcanvas-menu-link-color;
+    @media #{$medium-up} {
+      border: 0;
+      height: auto;
+      width: auto;
+    }
+    &::after {
+      left: 17px !important;
+      top: 22px;
+      transition-duration: .3s;
+      @media #{$medium-up} {
+        left: 15px !important;
+        top: 21px;
+      }
+    }
+  }
+}
+
+.c-banner__mini-phone {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+  color: $offcanvas-menu-link-color;
+  &:visited {
+    color: $offcanvas-menu-link-color;
+  }
+  &:hover {
+    color: $offcanvas-menu-link-color;
+    span {
+      background-color: $offcanvas-menu-link-color;
+      color: $white;
+    }
+  }
+  span {
+    font-size: 23px;
+    border-radius: 50%;
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    line-height: 43px;
+    border: 1px solid $offcanvas-link-color;
+  } 
+}

@@ -1,0 +1,24 @@
+$catch-color: $tertiary-color;
+
+.c-catch {
+  @extend .u-common-padding; //see base.scss
+  background-color: $catch-color;
+  &__sidebar, &__content {
+    @media #{$small-only} {
+      text-align: center;
+      .Normal p {
+        text-align: center !important;
+       }
+    }
+  }
+  &__sidebar {
+    @extend .columns;
+    @extend .medium-4;
+    @extend .u-make-it-white; //see base.scss
+  }
+  &__content {
+    @extend .columns;
+    @extend .medium-8;
+    @extend .u-make-it-white; //see base.scss
+  }
+}

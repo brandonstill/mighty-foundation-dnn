@@ -41,8 +41,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-a.button {
-  &, &:hover, &:visited, &:focus, &:active {
+.button {
+  color: $primary-color;
+  border-radius: 30px;
+  &:hover, &:visited, &:focus, &:active {
     color: white;
   }
 }

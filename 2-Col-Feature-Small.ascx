@@ -3,16 +3,19 @@
 <%@ Register TagPrefix="avt" TagName="MyTokens" Src="~/DesktopModules/avt.MyTokens/SkinObjectReplacer.ascx" %>
 <%@ Register TagPrefix="ar" TagName="Banner" Src="inc/banner.ascx" %>
 <%@ Register TagPrefix="ar" TagName="ContentInfo" Src="inc/contentinfo.ascx" %>
+<%@ Register TagPrefix="ar" TagName="DropTop" Src="inc/drop-top.ascx" %>
+<%@ Register TagPrefix="ar" TagName="DropBottom" Src="inc/drop-bottom.ascx" %>
+
+<ar:DropTop runat="server" />
 
 <div class="page-template page-template-feature-small page-template-2-col">
 <ar:Banner runat="server" />
 
 <section role="main">
-  <div id="TopPane" class="top" runat="server"></div>
+  <div id="TopPane" class="o-top-pane" runat="server"></div>
   <div class="row">
-    <div id="AsidePane" class="aside" role="complementary" runat="server"></div>
-    <div  class="content" >
-
+    <div id="AsidePane" class="o-aside-pane" role="complementary" runat="server"></div>
+    <div  class="o-content-pane">
       <div class="feature-wrap-small primary-color" style="background-image: url(<avt:MyTokens runat='server' Token='[Tab:Iconfilelarge]' />)">
         <div class="feature-wrap-color"></div>
         <div class="row">
@@ -25,8 +28,10 @@
 
     </div>
   </div>
-  <div id="BottomPane" class="bottom" runat="server"></div>
+  <div id="BottomPane" class="o-bottom-pane" runat="server"></div>
 </section>
 
 <ar:ContentInfo runat="server" />
 </div>
+
+<ar:DropBottom runat="server" />

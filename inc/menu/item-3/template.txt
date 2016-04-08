@@ -1,0 +1,27 @@
+
+<div class="niche-slider">
+  [*>NODE-TOP]
+</div>
+
+[>NODE-TOP]
+  [?ENABLED]
+    <div href="#" class="o-item item-right item-3">
+      <div class="o-item__wrap">
+        <div class="o-item__sidebar">
+          <div class="o-item__img" style="background-image:url('[=ICON]?dw=400&tw=400&mw=400')"></div>
+        </div>
+        <div class="o-item__content">
+          <div class="o-item__content-shim">
+            <h2>[=TEXT]</h2>
+            <a href="[=URL]" class="button small">Get a quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  [?ELSE]
+    [=TEXT]
+  [/?]
+[/>]
+
+
+
