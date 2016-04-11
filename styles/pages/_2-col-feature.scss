@@ -1,22 +1,84 @@
-.page-template-feature.page-template-2-col {
-  .feature-wrap {
-    @extend .make-it-white; //see base.scss
+.page-template-feature {
+  .o-feature-wrap {
+    @extend .make-it-white;
     position: relative;
+    height: 850px;
+    margin-top: -80px;
+    background-repeat: no-repeat;
     background-color: $primary-color;
     background-position: center center;
     background-size: cover;
-    padding: rem-calc(76) 0;
-    text-shadow: rgb(0,0,0) 1px 1px 0px;
     h2 {
-      font-size: rem-calc(44);
+      font-size: rem-calc(25);
+      text-transform: uppercase;
+      font-weight: bolder;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
-    .feature-wrap-color {
-      background-image: linear-gradient(45deg,rgba(0,0,0,.75) 20%, rgba(0,0,0,.1) 100%,transparent);
+    .o-feature-wrap-color {
+      background-image: linear-gradient(-180deg, #2A2727 0%, rgba(54,52,52,0.60) 40%, rgba(47,46,46,0.00) 50%, rgba(29,28,28,0.00) 56%, rgba(40,40,40,0.61) 68%, #2A2727 100%);
+      height: 100%;
+      width: 100%;
       position: absolute;
-      top: 0;
-      right: 0;
       bottom: 0;
-      left: 0;
     }
   }
+
+  .firstName,
+  .lastName,
+  .city,
+  .state {
+    @extend .small-6;
+    @extend .columns;
+    label {
+      color: white !important;
+    }
+    input[type=text] {
+      border-bottom: solid white 2px !important;
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
+      color: white;
+    }
+  }
+
+  .address,
+  .email,
+  .phone {
+    label {
+      color: white;
+    }
+    input[type=text] {
+      border-bottom: solid white 2px !important;
+      border: none;
+      background-color: transparent;
+      box-shadow: none;
+      color: white;
+      height: 30px;
+    }
+  }
+
+  img#dnn_ctl01_imgLogo {
+    position: absolute;
+    z-index: 1;
+    max-height: 65px;
+    padding: 10px;
+    top: -10px;
+    @media #{$medium-up} {
+      top: 60px;
+      max-height: 80px;
+    }
+  }
+
+  .o-feature-pane {
+    @extend .medium-7;
+    @extend .small-12;
+    @extend .columns;
+    float: right;
+  }
+
+  .offcanvas-menu-icon {
+    color: #fff !important;
+  }
+  
 }

@@ -1,0 +1,58 @@
+h3.item-name {
+  color: white;
+  font-weight: 800;
+}
+
+p.item-description {
+  color: white;
+  font-size: rem-calc(12);
+}
+
+//secondary-hero-full 4-up grid :(
+
+div#dnn_FeatureTopFull {
+  @extend .full-width;
+  margin-top: -40px;
+  background: $primary-color;
+}
+
+img.full-item-image {
+  max-width: 45px;
+}
+
+h3.full-item-name {
+  color: white;
+  font-size: rem-calc(23);
+  font-weight: 800;
+  line-height:1;
+  min-height: 60px;
+}
+
+p.full-item-description {
+  color: white;
+  font-size: rem-calc(12);
+}
+
+//tertiary-hero-grid
+.dnnForm.dnnClear {
+  //@extend .row;
+}
+.tertiary-item {
+  //@extend .row;
+  padding: 20px;
+  @media #{$medium-up} {
+    display: inline-block;
+    max-width: 24% !important;
+    padding: 10px;
+    vertical-align: top;
+  }
+  h3 {
+    font-size: rem-calc(18);
+    font-weight: bold;
+  }
+  p {
+    font-size: rem-calc(14);
+    color: $secondary-color;
+  }
+}
+

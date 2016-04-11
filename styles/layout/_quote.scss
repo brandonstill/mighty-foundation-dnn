@@ -4,13 +4,27 @@
   input[type='text'],
   a {
     display: inline-block;
-    max-width: 300px;
+    max-width: 200px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 50px;
+    max-height: 50px;
+    padding-bottom: 5px;
+    @media #{$large-up} {
+      max-width: 290px;
+    }
   }
 }
 
 .pusher {
   @extend .button;
   @extend .expand;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  max-width: 130px !important;
+  margin-left: -10px;
 }
 
 .firstName,
@@ -97,4 +111,48 @@ span.fillme {
     right: 2em;
     top: 2em;
   }
+}
+
+.o-quick-quote {
+  margin-top: 30px;
+}
+
+.c-quick-quote__col1 {
+  display: none;
+}
+
+.c-quick-quote__col2 {
+  @extend .medium-8;
+  @extend .small-8;
+  @extend .columns;
+  padding-left: 0px !important;
+  .c-quick-quote__zip {
+    height: 53px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: grey;
+    text-transform: uppercase;
+    font-size: rem-calc(14);
+    padding-left: 30px;
+  }
+}
+
+.c-quick-quote__col3 {
+  @extend .medium-4;
+  @extend .small-4;
+  @extend .columns;
+  margin-left: -30px;
+}
+
+#saveForm.button {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-weight: bold;
+  min-width: 120px;
+  height: 53px;
+}
+//quotrr zip
+.locator input {
+  text-transform: uppercase;
+  padding-left: 20px;
 }

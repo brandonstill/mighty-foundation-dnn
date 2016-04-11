@@ -1,0 +1,21 @@
+<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4">
+  [*>NODE-TOP]
+</ul>
+
+[>NODE-TOP]
+  <li class="tertiary-item">
+  [?ENABLED]
+    <a href="[=URL]">
+      <div class="tertiary-item-frame">
+        <img class="tertiary-item-image" src="[=ICON]" alt="[=TEXT]">
+      </div>
+    </a>
+    <a href="[=URL]">
+      <h3 class="tertiary-item-name">[=TEXT]</h3>
+    </a>
+    <p class="tertiary-item-description">[=DESCRIPTION]</p>
+  [?ELSE]
+    [=TEXT]
+  [/?]
+  </li>
+[/>]

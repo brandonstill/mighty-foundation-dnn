@@ -1,7 +1,7 @@
 // FILE PATHS
 
 $root  : '../../../';
-$image : '#{$root}image/';
+$image : '#{$root}mighty-perspective/image/';
 $icon  : '#{$image}Someicons/PNG/';
 $fonts : '#{$root}fonts/';
 $js    : '#{$root}js/';
@@ -116,7 +116,7 @@ $include-html-global-classes: $include-html-classes;
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
 
-// $white       : #FFFFFF;
+$white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -132,22 +132,22 @@ $include-html-global-classes: $include-html-classes;
 // $steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
-// $oil         : #333333;
+$oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
-$secondary-color: #e7e7e7;
+$primary-color: #3A3839;
+$secondary-color: #827E7E;
 // $alert-color: #f04124;
-// $success-color: #43AC6A;
+$success-color: #6ED143;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
-$body-font-family: 'Helvetica', Helvetica, Arial, sans-serif;
+$body-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -216,19 +216,19 @@ $medium-range: (40.063em, 64em);
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: 'Helvetica', Helvetica, Arial, sans-serif;
+$header-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+$header-font-color: $primary-color;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-$h1-font-size: rem-calc(44);
-$h2-font-size: rem-calc(28);
-$h3-font-size: rem-calc(22);
+$h1-font-size: rem-calc(49);
+$h2-font-size: rem-calc(40);
+$h3-font-size: rem-calc(26);
 $h4-font-size: rem-calc(20);
 $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
@@ -877,7 +877,7 @@ $input-font-size: rem-calc(17);
 // $tabbar-menu-icon-height: $tabbar-height;
 // $tabbar-menu-icon-padding: 0;
 
-// $tabbar-hamburger-icon-width: rem-calc(16);
+$tabbar-hamburger-icon-width: rem-calc(20);
 // $tabbar-hamburger-icon-left: false;
 // $tabbar-hamburger-icon-top: false;
 // $tabbar-hamburger-icon-thickness: 1px;

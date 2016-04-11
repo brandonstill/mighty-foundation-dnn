@@ -1,4 +1,4 @@
-.page-template-feature-small.page-template-2-col {
+.page-template-feature-small.inner-page-template-2-col {
   .feature-wrap-small {
     @extend .make-it-white; //see base.scss
     background-color: $primary-color;
@@ -32,6 +32,10 @@
   @media #{$medium-up} {
     .feature-content {
       padding: 0 rem-calc(25) 0 rem-calc(15);
+      color: white;
     }
+  }
+  .surveyor label {
+    color: white !important;
   }
 }

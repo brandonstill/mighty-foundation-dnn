@@ -1,0 +1,21 @@
+<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4">
+  [*>NODE-TOP]
+</ul>
+
+[>NODE-TOP]
+  <li class="full-item">
+  [?ENABLED]
+    <a href="[=URL]">
+      <div class="full-item-frame">
+        <img class="full-item-image" src="[=ICON]" alt="[=TEXT]">
+      </div>
+    </a>
+    <a href="[=URL]">
+      <h3 class="full-item-name">[=TEXT]</h3>
+    </a>
+    <p class="full-item-description">[=DESCRIPTION]</p>
+  [?ELSE]
+    [=TEXT]
+  [/?]
+  </li>
+[/>]

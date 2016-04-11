@@ -1,3 +1,52 @@
-.page-template-2-col {
+.inner-page-template-2-col {
+  [role="main"] {
+    min-height: 35em;
+  }
+  .c-banner__phone-md {
+    color: $primary-color;
+  }
+  ul.c-banner__mini-nav li a {
+    color: $primary-color;
+  }
 
+  .locator {
+    input[type='text'],
+    a {
+      display: inline-block;
+      max-width: 210px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      min-height: 50px;
+      max-height: 50px;
+      padding-bottom: 5px;
+      @media #{$large-up} {
+        max-width: 170px;
+      }
+    }
+  }
+  .offcanvas-menu-icon {
+    color: #333;
+    span::after {
+      box-shadow: 0 0 0 1px #333,0 7px 0 1px #333,0 14px 0 1px #333;
+    }
+    &:hover {
+      @media #{$medium-up} {
+        span::after {
+          box-shadow: 0 0 0 1px #fff,0 7px 0 1px #fff,0 14px 0 1px #fff;
+        }
+      }
+    }
+  }
+  .quotrr h2 {
+      font-size: rem-calc(25);
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      line-height: 1;
+  }
+  img#dnn_ctl02_imgLogo {
+    @extend .row;
+    @extend .columns;
+    max-height: 80px;
+    padding: 10px;
+  }
 }

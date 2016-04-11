@@ -1,20 +1,18 @@
 [role='main'] {
-  .content {
+  .o-content-pane {
     @extend .medium-8;
     @extend .columns;
-    min-height: 25em;
+    @extend .common-padding; //see base.scss
   }
 
-  .aside {
+  .o-aside-pane {
     @extend .medium-4;
     @extend .columns;
     @extend .right;
-
-    &.DNNEmptyPane + .content {
+    &.DNNEmptyPane + .o-content-pane {
       @extend .medium-12;
       border-right: 0;
     }
-
   }
 
   // Half size HR
@@ -27,7 +25,7 @@
 
 @media #{$medium-up} {
   [role='main'] {
-    .aside {
+    .o-aside-pane {
       padding-left: 20px;
     }
   }

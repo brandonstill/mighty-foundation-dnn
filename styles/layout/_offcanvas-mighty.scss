@@ -1,0 +1,181 @@
+$offcanvas-color: $primary-color; // Change for lighter background
+$offcanvas-link-color: #fff; // Adjust if light background
+$offcanvas-link-hover-color: darken($offcanvas-link-color, 15); // Adjust if light background
+$offcanvas-sub-link-color: #fff; // Adjust if light background
+$offcanvas-sub-link-hover-color: darken($offcanvas-link-color, 15);
+$offcanvas-menu-link-color: $white;
+
+// Right off canvas
+.right-off-canvas-menu { // If using left change this to .left-off-canvas-menu
+  background-color: $offcanvas-color; // Change for darker background
+  width: rem-calc(280);
+  bottom: initial; // :(
+  float: right;
+  clear: both;
+  .off-canvas-header {
+    position: relative;
+  }
+  a.exit-off-canvas {
+    height: 40px !important;
+    width: 40px !important;
+    box-shadow: none !important;
+    top: 20px;
+    position: relative !important;
+    float: right;
+    background: none !important;
+    margin-right: 15px;
+    line-height: 1;
+    &:after {
+      font-size: rem-calc(40);
+      font-family: FontAwesome !important;
+      font-weight: normal;
+      content: '\f00d';
+      display: inline-block;
+      color: $offcanvas-link-color;
+      top: 0;
+      left: 0;
+      position: relative;
+    }
+    &:hover {
+      &:after {
+        color: $offcanvas-link-hover-color;
+      }
+    }
+  }
+}
+
+// Off canvas
+.off-canvas-list {
+  padding: 80px 30px 40px !important;
+  > li {
+    position: relative;
+  }
+  > li > a {
+    font-size: rem-calc(20) !important; // Change this depending on  font
+    line-height: 1 !important;
+    padding: 10px 20px 10px 10px!important;
+    border-bottom: 0 !important; // Change for darker background
+    color: $offcanvas-link-color !important;
+    &:visited {
+      color: $offcanvas-link-color !important;
+    }
+    &:hover {
+      color: $offcanvas-link-hover-color;
+      background: none !important;
+    }
+  }
+  .has-dropdown .toggle-me {
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    &:after {
+      font-size: rem-calc(14);
+      font-family: FontAwesome !important;
+      font-weight: normal;
+      content: '\f078';
+      transform: rotate(0);
+      transition: all .4s; 
+      display: inline-block;
+      color: $offcanvas-link-color;
+      top: 6px;
+      left: 5px;
+      position: relative;
+    } 
+    &.active:after {
+      transform: rotate(180deg);
+    } 
+    &:hover:after {
+      transform: rotate(90deg);
+    } 
+  }
+}
+
+// Off canvas submenu
+
+.off-canvas-submenu {
+  padding: 0 !important;
+  margin: 0 !important;
+  li {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    a {
+      border-bottom: 0 !important;
+      padding: 4px 20px !important;
+      font-size: rem-calc(14) !important;
+      color: $offcanvas-sub-link-color !important;
+      &:visited {
+        color: $offcanvas-sub-link-color !important;
+      }
+      &:hover {
+        color: $offcanvas-sub-link-hover-color !important;
+        background: none !important;
+      }
+    }
+  }
+}
+
+// Off canvas background
+
+.offcanvas-overlap .exit-off-canvas {
+  background: rgba(#000,.4) !important;
+}
+
+// Off canvas menu icon
+
+.offcanvas-menu-icon {
+  cursor: pointer;
+  line-height: 1.5;
+  min-width: 94px;
+  width: 60px;
+  padding: 6px 0px 9px 0;
+  span { font-size: 30px; }
+  @include hamburger($tabbar-hamburger-icon-width, $tabbar-hamburger-icon-left, $tabbar-hamburger-icon-top, $tabbar-hamburger-icon-thickness, $tabbar-hamburger-icon-gap, $offcanvas-menu-link-color, $tabbar-menu-icon-hover, true);
+  color: $white;
+  font-size: rem-calc(17);
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 1;
+  @media #{$medium-up} {
+    min-width: 105px;
+    width: 94px;
+    padding: 6px 10px 5px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    transition-duration: .3s;
+    margin-top: 20px;
+    &:hover {
+      background-color: $primary-color;
+      color: $white !important;
+      span::after { box-shadow: 0 0 0 1px $white, 0 7px 0 1px $white, 0 14px 0 1px $white; }
+    }
+  }
+
+  span {
+    border-radius: 50%;
+    display: inline-block;
+    height: 43px;
+    width: 43px;
+    @media #{$medium-up} {
+      border: 0;
+      height: auto;
+      width: auto;
+    }
+    &::after {
+      left: 14px;
+      top: 22px;
+      transition-duration: .3s;
+      @media #{$medium-up} {
+        left: 15px;
+        top: 21px;
+      }
+    }
+  }
+}
+

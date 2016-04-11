@@ -24,7 +24,7 @@
 // 'foundation/components/joyride',
 // 'foundation/components/keystrokes',
 // 'foundation/components/labels',
-'foundation/components/magellan',
+//'foundation/components/magellan',
 // 'foundation/components/orbit',
 // 'foundation/components/pagination',
 'foundation/components/panels',
@@ -42,11 +42,11 @@
 'foundation/components/tooltips',
 'foundation/components/top-bar',
 'foundation/components/type',
-// 'foundation/components/offcanvas',
+'foundation/components/offcanvas',
 'foundation/components/visibility';
 
-@import 'utility-belt';
-@import 'slick';
+// @import 'utility-belt';
+//@import 'slick';
 
 @import 'layout/base';
 @import 'pages/errors';

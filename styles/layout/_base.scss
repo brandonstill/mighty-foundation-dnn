@@ -12,6 +12,8 @@ $feature-height-sm: 320px - $banner-height;
 
 @import 'reset';
 @import 'banner';
+@import 'offcanvas-mighty';
+@import 'secondary-hero';
 @import 'main';
 @import 'quote';
 @import 'contentinfo';
@@ -45,4 +47,8 @@ $feature-height-sm: 320px - $banner-height;
 .common-padding {
   padding-top: rem-calc(40);
   padding-bottom: rem-calc(40);
+}
+
+h1 {
+  font-weight: 700;
 }
